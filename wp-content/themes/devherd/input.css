@@ -1,0 +1,101 @@
+/*
+Theme Name: Devherd
+Theme URI: https://devherd.com/
+Author: Kyle Shepherd
+Author URI: https://devherd.com/
+*/
+
+@tailwind base;
+
+@tailwind components;
+
+.header-menu {
+    @apply header-menu my-6 text-gray-900 tracking-wide;
+}
+
+.header-menu li {
+    @apply my-2;
+}
+
+.header-menu li > a {
+    @apply transition-colors duration-200 ease-in-out;
+}
+
+.header-menu li.current-menu-item,
+.header-menu li > a:hover {
+    @apply text-gray-500;
+}
+
+#masonry {
+    font-size: 0px;
+    line-height: 0;
+
+    -webkit-column-gap: 8px;
+    -moz-column-gap: 8px;
+    column-gap: 8px;
+    -webkit-column-count: 1 !important;
+    -moz-column-count: 1 !important;
+    column-count: 1 !important;
+}
+
+@screen md {
+    #masonry {
+        -webkit-column-count: 2 !important;
+        -moz-column-count: 2 !important;
+        column-count: 2 !important;
+    }
+}
+
+@screen lg {
+    #masonry {
+        -webkit-column-count: 3 !important;
+        -moz-column-count: 3 !important;
+        column-count: 3 !important;
+    }
+}
+
+#masonry img {
+    /* Just in case there are inline attributes */
+    width: 100% !important;
+    height: auto !important;
+}
+
+@screen md {
+    .masonry-lightbox.mfp-gallery {
+        @apply left-auto right-0;
+        width: 80%;
+    }
+}
+
+.masonry-lightbox.mfp-gallery .mfp-img {
+    @apply mx-auto;
+}
+
+.mfp-bg {
+    background: white !important;
+    left: auto !important;
+    right: 0 !important;
+    opacity: 1 !important;
+}
+
+@screen md {
+    .mfp-bg {
+        width: 80% !important;
+    }
+}
+
+.mfp-figure::after {
+    display: none !important;
+}
+
+#logo {
+    @apply mx-auto;
+}
+
+@screen md {
+    #logo {
+        @apply mx-0;
+    }
+}
+
+@tailwind utilities;
