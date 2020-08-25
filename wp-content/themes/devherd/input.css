@@ -26,39 +26,25 @@ Author URI: https://devherd.com/
     @apply text-gray-500;
 }
 
-#masonry {
-    font-size: 0px;
-    line-height: 0;
+/*#masonry {*/
+/*    font-size: 0px;*/
+/*    line-height: 0;*/
 
-    -webkit-column-gap: 8px;
-    -moz-column-gap: 8px;
-    column-gap: 8px;
-    -webkit-column-count: 1 !important;
-    -moz-column-count: 1 !important;
-    column-count: 1 !important;
-}
+/*    -webkit-column-gap: 8px;*/
+/*    -moz-column-gap: 8px;*/
+/*    column-gap: 8px;*/
+/*    -webkit-column-count: 1 !important;*/
+/*    -moz-column-count: 1 !important;*/
+/*    column-count: 1 !important;*/
+/*}*/
 
-@screen md {
-    #masonry {
-        -webkit-column-count: 2 !important;
-        -moz-column-count: 2 !important;
-        column-count: 2 !important;
-    }
-}
-
-@screen lg {
-    #masonry {
-        -webkit-column-count: 3 !important;
-        -moz-column-count: 3 !important;
-        column-count: 3 !important;
-    }
-}
-
-#masonry img {
-    /* Just in case there are inline attributes */
-    width: 100% !important;
-    height: auto !important;
-}
+/*@screen md {*/
+/*    #masonry {*/
+/*        -webkit-column-count: 2 !important;*/
+/*        -moz-column-count: 2 !important;*/
+/*        column-count: 2 !important;*/
+/*    }*/
+/*}*/
 
 @screen md {
     .masonry-lightbox.mfp-gallery {
@@ -95,6 +81,46 @@ Author URI: https://devherd.com/
 @screen md {
     #logo {
         @apply mx-0;
+    }
+}
+
+.grid-sizer, .grid-img {
+    width: 100%;
+}
+
+.gutter-sizer {
+    width: 0;
+}
+
+.grid-img {
+    margin-bottom: 5px;
+}
+
+@screen md {
+    .grid-sizer, .grid-img {
+        width: 49.5%;
+    }
+
+    .gutter-sizer {
+        width: 1%;
+    }
+
+    .grid-img {
+        margin-bottom: 7px;
+    }
+}
+
+@screen lg {
+    .grid-sizer, .grid-img {
+        width: 33%;
+    }
+
+    .gutter-sizer {
+        width: 0.5%
+    }
+
+    .grid-img {
+        margin-bottom: 5px;
     }
 }
 

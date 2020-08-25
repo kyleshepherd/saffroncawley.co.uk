@@ -14,6 +14,7 @@ add_action( 'wp_enqueue_scripts', 'devherd_register_styles' );
 function devherd_register_scripts() {
 	wp_enqueue_script( 'devherd', get_template_directory_uri() . '/assets/js/devherd.js', array( 'jquery' ), '1.0.0', true );
 	wp_enqueue_script( 'magnific', get_template_directory_uri() . '/assets/js/magnific.js', array(), '1.0.0' );
+	wp_enqueue_script( 'masonry', get_template_directory_uri() . '/assets/js/masonry.pkgd.min.js', array( 'jquery' ), '1.0.0' );
 }
 
 add_action( 'wp_enqueue_scripts', 'devherd_register_scripts' );
