@@ -6,8 +6,9 @@
 			<?php while ( have_rows( 'images' ) ) {
 				the_row();
 				$image       = get_sub_field( 'image' );
-				$orientation = get_sub_field( 'orientation' ); ?>
-                <a class="grid-img" href="<?php echo $image['sizes'][ $orientation ]; ?>" class="inline-block mb-2">
+				$orientation = get_sub_field( 'orientation' ) . '-prev';
+				?>
+                <a class="grid-img inline-block mb-2" href="<?php echo $image['sizes'][ $orientation ]; ?>">
                     <img src="<?php echo $image['sizes'][ $orientation ]; ?>" />
                 </a>
 			<?php } ?>
